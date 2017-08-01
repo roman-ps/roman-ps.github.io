@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-style: normal;
+  src: url("/fonts/Roboto-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: normal;
+  src: url("/fonts/Roboto-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+}
+
+body {
+  padding-top: 200px;
+  font-family: "Roboto", "Arial", sans-serif;
+  background: #99ccff;
+}
+
+.wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.header__title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 100;
+}
+
+.layouts {
+  margin-bottom: 50px;
+}
+
+.layouts__title {
+  width: 225px;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.layouts__main {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layouts__main-item {
+  margin-right: 15px;
+  margin-bottom: 20px;
+  width: 350px;
+  background: #deeaee;
+}
+
+.layouts__main-link {
+  display: block;
+  opacity: .5;
+}
+
+.layouts__main-link:hover {
+  opacity: 1;
+}
+
+.layouts__main-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.layouts__main-description {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.footer {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer__mail {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #000000;
+  opacity: .5;
+}
+
+.footer__mail:hover {
+  opacity: 1;
+}
+
+.footer__git {
+  display: inline-block;
+  font-size: 20px;
+  opacity: .5;
+}
+
+.footer__git:hover {
+  opacity: 1;
+}

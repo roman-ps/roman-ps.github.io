@@ -1,0 +1,277 @@
+@font-face {
+  font-family: 'Nexa';
+  src: local('Nexa Light'), local('Nexa-Light'),
+  url('../fonts/Nexa Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: local('Nexa Bold'), local('Nexa-Bold'),
+  url('../fonts/Nexa Bold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Nexa', 'Arial', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.header,
+.about,
+.portfolio,
+.footer {
+  height: 1080px;
+}
+
+/* HEADER */
+
+.header {
+  background: url(../img/background.jpg); 
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.header-menu {
+  font-size: 24px;
+  letter-spacing: 0.025em;
+  list-style: none;
+  width: 613px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 147px;
+}
+
+.header-menu a {
+  color: #f1f1f1;
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 41px 0px;
+}
+
+.header-main {
+  width: 730px;
+  color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.header-logo {
+  position: relative;
+}
+
+.header-logo::after {
+  position: absolute;
+  content: 'TM';
+  font-size: 36px;
+  letter-spacing: 0.025em;
+  top: 0;
+  right: 0;
+}
+
+.header-title {
+  font-size: 60px;
+  letter-spacing: 0.025em;
+}
+
+.scroll-down {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  position: relative;
+  color: #ffffff;
+  margin: 0 auto;
+  width: 302px;
+  text-transform: uppercase;
+}
+
+.scroll-down::after {
+  position: absolute;
+  content: '';
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  top: 50px;
+  left: 44%;
+  width: 32px;
+  height: 32px;
+}
+
+/* ABOUT ME */
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.menu-about {
+  margin-bottom: 80px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.about-img {
+  padding-left: 160px;
+  width: 775px;
+}
+
+.about-me {
+  width: 695px;
+  margin-left: 55px;
+}
+
+.about-me h2 {
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 120px;
+  font-weight: 400;
+}
+
+.about-main {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 24px;
+  line-height: 50px;
+  font-weight: 300;
+}
+
+.about-signature {
+  margin-top: 45px;
+  font-family: 'Comic Sans MS', serif;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.scroll-about {
+  width: 515px;
+  color: #000000;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  background-image: url(../img/background-portfolio.jpg);
+  background-repeat: no-repeat;
+}
+
+.menu-portfolio {
+  border-bottom: 1px solid #bebebe;
+}
+
+.portfolio-title {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 120px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 auto;
+  width: 380px;
+  margin-top: -100px;
+}
+
+.portfolio-container {
+  padding: 0 165px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.portfolio-item {
+margin: 20px 0;
+}
+
+.scroll-portfolio {
+  width: 615px;
+}
+
+/* FOOTER */
+
+.footer-container {
+  margin: 0 auto;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  width: 710px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-item {
+/*  margin-bottom: -50px;*/
+  margin-top: -80px;
+}
+
+.item-title {
+  font-size: 30px;
+  line-height: 120px;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  margin-bottom: -70px;
+}
+
+.item-contact {
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.footer-social {
+  margin-top: 70px;
+}
+
+.item-phone {
+  font-size: 48px;
+}
+
+.menu-footer {
+  margin-bottom: 0px;
+  border-bottom: 1px solid #bebebe;
+}
+
+.social {
+  font-size: 0;
+  display: inline-block;
+  width: 57px;
+  height: 57px;
+  background-repeat: no-repeat;
+}
+
+.facebook {
+  background-image: url(../img/social-facebook.png);
+}
+
+.twitter {
+  background-image: url(../img/social-twitter.png);
+}
+
+.instagram {
+  background-image: url(../img/social-instagram.png);
+}
+
+.copyright {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 260px;
+  border-top: 1px solid #cccccc;
+}

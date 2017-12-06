@@ -60,7 +60,6 @@ a {
 /*  HEADER  */
 
 .header {
-  position: relative;
   background: url(../img/bg-main.jpg) no-repeat;
   background-position: 50% 0;
   text-transform: uppercase;
@@ -68,27 +67,31 @@ a {
 
 /* стрелка на фоне в header */
 
-.header::before {
+.header .wrapper {
+  position: relative;
+}
+
+.header .wrapper::before {
   content: '';
   position: absolute;
   width: 42px;
   height: 3px;
   background: #ffffff;
   top: 87%;
-  left: 938px;
+  left: 50%;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
-.header::after {
+.header .wrapper::after {
   content: '';
   position: absolute;
   width: 42px;
   height: 3px;
   background: #ffffff;
   top: 87%;
-  left: 910px;
+  left: 48.1%;
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);

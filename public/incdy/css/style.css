@@ -1,0 +1,579 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-facebook {
+    width: 15px;
+    height: 29px;
+    background-position: -10px -10px;
+}
+
+.sprite-instagram {
+    width: 27px;
+    height: 26px;
+    background-position: -45px -10px;
+}
+
+.sprite-twitter {
+    width: 27px;
+    height: 22px;
+    background-position: -92px -10px;
+}
+
+@font-face {
+  font-family: "ProximaNovaBold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/ProximaNova-Bold.woff") format("woff"),
+    url("../fonts/ProximaNova-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "ProximaNovaLight";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/ProximaNova-Light.woff") format("woff"),
+    url("../fonts/ProximaNova-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "ProximaNovaSemibold";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/ProximaNova-Semibold.woff") format("woff"),
+    url("../fonts/ProximaNova-Semibold.ttf") format("ttf");
+}
+
+.wrapper {
+  width: 1500px;
+  margin: 0 auto;
+}
+
+/* убираем подчеркивание всем ссылкам */
+
+a {
+  text-decoration: none;
+}
+
+/*  HEADER  */
+
+.header {
+  position: relative;
+  background: url(../img/bg-main.jpg) no-repeat;
+  background-position: 50% 0;
+  text-transform: uppercase;
+}
+
+/* стрелка на фоне в header */
+
+.header::before {
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 3px;
+  background: #ffffff;
+  top: 87%;
+  left: 938px;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 3px;
+  background: #ffffff;
+  top: 87%;
+  left: 910px;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+/* -------------------- */
+
+.header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 300px;
+  padding-top: 30px;
+}
+
+.header-logo {
+  padding-left: 20px;
+  background: #ffffff;
+  font-family: "ProximaNovaBold", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 75px;
+  letter-spacing: .4em;
+}
+
+.header-logo:hover {
+  color: #ffffff;
+  background: #000000;
+}
+
+.header-logo:active {
+  color: #000000;
+  background: #ffffff;
+  opacity: .6;
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.header-menu__item {
+  padding: 0 30px;
+}
+
+.header-menu__link {
+  color: #ffffff;
+  font-family: "ProximaNovaSemibold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: .35em;
+  border: 2px solid transparent;
+}
+
+.header-menu__link:hover {
+  border-bottom: 2px solid red;
+}
+
+.header-menu__link:active {
+  border-bottom: 2px solid red;
+  opacity: .5;
+}
+
+.header-menu__link--active {
+  color: #f84545;
+}
+
+.header-bottom {
+  text-align: center;
+  padding-bottom: 320px;
+}
+
+.header-title {
+  color: #ffffff;
+  font-family: "ProximaNovaLight", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 70px;
+  letter-spacing: .6em;
+}
+.header-title:hover {
+  color: #f84545;
+}
+
+.header-subtitle {
+  color: #f84545;
+  font-family: "ProximaNovaBold", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 75px;
+  letter-spacing: .4em;
+}
+
+.header-subtitle:hover {
+  color: #ffffff;
+}
+
+/* SHOP */
+
+.shop {
+  margin-bottom: 76px;
+  text-transform: uppercase;
+}
+
+.shop-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 776px;
+  margin-top: 84px;
+  margin-bottom: 50px;
+}
+
+.shop-top__main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 982px;
+  min-height: 776px;
+  margin-right: 57px;
+  background: #000000 url("../img/shop-gourmet.jpg") no-repeat;
+  font-family: "ProximaNovaLight", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 70px;
+  letter-spacing: .4em;
+  color: #ffffff;
+}
+
+/* изменение состояния картинок брендов */
+
+.shop-top__main,
+.shop-top__secondary,
+.shop-bottom__item {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); 
+}
+
+.shop-top__main:hover,
+.shop-top__secondary:hover,
+.shop-bottom__item:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%); 
+}
+
+.shop-top__main:active,
+.shop-top__secondary:active,
+.shop-bottom__item:active {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%); 
+  -webkit-transform: scale(1.1) rotateY(180deg); 
+          transform: scale(1.1) rotateY(180deg);
+}
+
+/* --------------------- */
+
+.shop-top__main::after {
+  content: '';
+  position: absolute;
+  width: 195px;
+  height: 191px;
+  top: 450px;
+  left: 70px;
+  background: url("../img/shop-gourmet.png") no-repeat;
+}
+
+.shop-top__main-text {
+  padding: 0 58px;
+  margin-bottom: 45px;
+}
+
+.shop-top__secondary {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 463px;
+  min-height: 360px;
+  font-family: "ProximaNovaLight", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 45px;
+  letter-spacing: .4em;
+  color: #ffffff;
+}
+
+.shop-top__secondary-text {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+
+/* Фоны для верхних правых блоков */
+
+.shop-top__secondary--top {
+  background: #000000 url("../img/shop-carhartt.jpg") no-repeat;
+}
+
+.shop-top__secondary--bottom {
+  background: #000000 url("../img/shop-adidas.jpg") no-repeat;
+}
+
+.shop-top__secondary--bottom::after,
+.shop-top__secondary--top::after {
+  content: '';
+  position: absolute;
+}
+
+.shop-top__secondary--top::after {
+  width: 81px;
+  height: 96px;
+  top: 100px;
+  left: 45px;
+  background: url("../img/shop-carhartt.png") no-repeat;
+}
+
+.shop-top__secondary--bottom::after {
+  width: 140px;
+  height: 96px;
+  top: 117px;
+  left: 34px;
+  background: url("../img/shop-adidas.png") no-repeat;
+}
+
+/* ------------------------- */
+
+
+.shop-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop-bottom__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 462px;
+  min-height: 580px;
+  font-family: "ProximaNovaLight", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 45px;
+  letter-spacing: .4em;
+  color: #ffffff;
+}
+
+.shop-bottom__item-text {
+  padding: 0 60px 0 30px;
+  margin-bottom: 30px;
+}
+
+/* Фоны для трех нижних блоков */
+
+.shop-bottom__item--first {
+  background: #000000 url("../img/shop-deepsale.jpg") no-repeat;
+}
+
+.shop-bottom__item--second {
+  background: #000000 url("../img/shop-palace2014.jpg") no-repeat;
+}
+
+.shop-bottom__item--third {
+  background: #000000 url("../img/shop-techpack.jpg") no-repeat;
+}
+
+
+.shop-bottom__item--first::after,
+.shop-bottom__item--second::after,
+.shop-bottom__item--third::after {
+  content: '';
+  position: absolute;
+}
+
+.shop-bottom__item--first::after {
+  width: 275px;
+  height: 68px;
+  top: 370px;
+  left: 30px;
+  background: url("../img/shop-deepsale.png") no-repeat;
+}
+
+.shop-bottom__item--second::after {
+  width: 110px;
+  height: 95px;
+  top: 340px;
+  left: 30px;
+  background: url("../img/shop-palace2014.png") no-repeat;
+}
+
+.shop-bottom__item--third::after {
+  width: 183px;
+  height: 97px;
+  top: 380px;
+  left: 30px;
+  background: url("../img/shop-techpack.png") no-repeat;
+}
+
+/* --------------------- */
+
+/* INSTAGRAM */
+
+.instagram {
+  height: 848px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000000 url("../img/bg-instagram.jpg") no-repeat;
+  background-position: 50% 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.instagram__title {
+  color: #ffffff;
+  font-family: "ProximaNovaLight", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 70px;
+  letter-spacing: .7em; 
+}
+
+.instagram__title:hover {
+  color: #f84545;
+}
+
+.instagram__subtitle {
+  margin-top: -40px;
+  color: #f84545;
+  font-family: "ProximaNovaBold", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 75px;
+  letter-spacing: .4em;
+}
+
+.instagram__subtitle:hover {
+  color: #ffffff;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 65px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "ProximaNovaSemibold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+}
+
+.footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-menu__item {
+  padding-right: 70px;
+}
+
+.footer-menu__link {
+  color: #000000;
+  border: 2px solid transparent;
+}
+
+.footer-menu__link:hover {
+  border-bottom: 2px solid red;
+}
+
+.footer-menu__link:active {
+  border-bottom: 2px solid red;
+  opacity: .5;
+}
+
+.footer-menu__link--disabled:hover,
+.footer-menu__link--disabled:active {
+  border: 2px solid transparent;
+  opacity: 1;
+}
+
+.footer-social {
+  width: 165px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0;
+}
+
+.footer-social__item {
+  position: relative;
+}
+
+.footer-social__item:hover {
+  opacity: .6;
+}
+
+.footer-social__item:active {
+  opacity: .3;
+}
+
+
+.footer-social__item--instagram {
+  width: 27px;
+  height: 26px;
+}
+
+.footer-social__item--facebook {
+  width: 15px;
+  height: 29px;
+}
+
+.footer-social__item--twitter {
+  width: 27px;
+  height: 22px;
+}
+
+/* иконки для соцсетей */
+
+.footer-social__item--instagram::after,
+.footer-social__item--facebook::after,
+.footer-social__item--twitter::after {
+  content: '';
+  position: absolute;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  display: block;
+  top: 0;
+}
+
+.footer-social__item--instagram::after {
+  width: 27px;
+  height: 26px;
+  background-position: -45px -10px;
+}
+
+.footer-social__item--facebook::after {
+  width: 15px;
+  height: 29px;
+  background-position: -10px -10px;
+}
+
+.footer-social__item--twitter::after {
+  width: 27px;
+  height: 22px;
+  background-position: -92px -10px;
+}
+
+/* --------------------- */

@@ -26,6 +26,17 @@
   src: url("/fonts/Roboto-Bold.woff2") format("woff2");
 }
 
+@keyframes title {
+  0%   {opacity: .1;}
+  100% {opacity: 1;}
+}
+
+@keyframes title-move {
+  0%   {transform: translateX(-500px);}
+  90%   {transform: translateX(60px);}
+  100% {transform: translateX(0);}
+}
+
 body {
   padding-top: 200px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -42,6 +53,7 @@ body {
   color: #ffffff;
   font-size: 45px;
   font-weight: 100;
+  animation: title linear 2s;
 }
 
 .layouts {
@@ -53,6 +65,7 @@ body {
   margin: 0 auto;
   font-size: 22px;
   font-weight: 300;
+  animation: title-move ease-in-out 2s;
 }
 
 .layouts__main {

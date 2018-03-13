@@ -2,28 +2,28 @@
   font-family: "Roboto";
   font-weight: 100;
   font-style: normal;
-  src: url("fonts/Roboto-Thin.woff2") format("woff2");
+  src: url("/fonts/Roboto-Thin.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 300;
   font-style: normal;
-  src: url("fonts/Roboto-Light.woff2") format("woff2");
+  src: url("/fonts/Roboto-Light.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
   font-style: normal;
-  src: url("fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
   font-style: normal;
-  src: url("fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
 }
 
 @keyframes title {
@@ -61,8 +61,7 @@ body {
 }
 
 .layouts__title {
-  width: 225px;
-  margin: 0 auto;
+  text-align: center;
   font-size: 22px;
   font-weight: 300;
   animation: title-move ease-in-out 2s;

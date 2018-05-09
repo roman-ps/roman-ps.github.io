@@ -28,16 +28,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Roboto Bold"),
-    url("../fonts/Roboto-Bold.woff2") format("woff2"),
-    url("../fonts/Roboto-Bold.woff") format("woff");
-  font-display: swap;
-}
-
 @keyframes title {
   0%   {opacity: .1;}
   100% {opacity: 1;}
@@ -94,7 +84,7 @@ body {
 
 .layouts__main-link {
   display: block;
-  opacity: .5;
+  opacity: .7;
 }
 
 .layouts__main-link:hover {

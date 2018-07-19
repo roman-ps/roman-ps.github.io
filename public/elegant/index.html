@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Макет Elegant</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="preload" href="fonts/Avenir-Light.woff" as="font">
+    <link rel="preload" href="fonts/Lato-Heavy.woff" as="font">
+    <link rel="preload" href="fonts/Lato-Medium.woff" as="font">
+    <link rel="preload" href="fonts/Lato-Regular.woff" as="font">
+    <link rel="preload" href="fonts/Lato-Semibold.woff" as="font">
+    <link rel="preload" href="fonts/Lato-Thin.woff" as="font">
+    <link rel="preload" href="fonts/Raleway-Bold.woff" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__container">
+          <div class="header__top">
+            <a class="logo header__logo">Elegant</a>
+            <button class="menu__btn menu__btn--open">Раскрыть меню</button>
+            <button class="menu__btn menu__btn--close">Закрыть меню</button>
+          </div>
+          <nav class="header__nav">
+            <ul class="menu header__menu">
+              <li class="menu__item"><a class="menu__link" href="#">Hello</a></li>
+              <li class="menu__item"><a class="menu__link" href="#about">About us</a></li>
+              <li class="menu__item"><a class="menu__link" href="#work">Our work</a></li>
+              <li class="menu__item"><a class="menu__link" href="#clients">Clients</a></li>
+              <li class="menu__item"><a class="menu__link" href="#services">Services</a></li>
+              <li class="menu__item"><a class="menu__link" href="#contacts">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <h1 class="header__title">We're creative agency</h1>
+        <p class="header__subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br> Aenean commodo ligula eget dolor. Aenean massa.</p>
+        <div class="header__btn-container">
+          <a class="header__btn" href="#about">Move down</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="about">
+      <div class="wrapper">
+        <h2 class="title about__title" id="about">About us</h2>
+        <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos-trud exercitation ullamco laboris.</p>
+      </div>
+      <div class="about__container">
+        <div class="wrapper">
+          <h3 class="about__container-title">Dolore magna aliqua</h3>
+          <p class="about__container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore<br> et dolore magna aliqua.</p>
+          <a class="about__container-link" href="#">more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="work">
+      <div class="wrapper">
+        <h2 class="title work__title" id="work">Our Work</h2>
+        <ul class="work__nav">
+          <li class="work__nav-item"><a class="work__nav-link work__nav-link--active" href="#" data-name="all">All</a></li>
+          <li class="work__nav-item"><a class="work__nav-link js-click" href="#" data-name="branding">Branding</a></li>
+          <li class="work__nav-item"><a class="work__nav-link js-click" href="#" data-name="design">Web design</a></li>
+          <li class="work__nav-item"><a class="work__nav-link js-click" href="#" data-name="mobile">Mobile Ui</a></li>
+          <li class="work__nav-item"><a class="work__nav-link js-click" href="#" data-name="illustration">Illustrations</a></li>
+        </ul>
+        <ul class="work__list">
+          <li class="work__list-item" data-name="branding">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item1-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item1-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item1-low.jpg">
+                <img src="img/work-item1.jpg" alt="Item1">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item" data-name="mobile">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item2-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item2-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item2-low.jpg">
+                <img src="img/work-item2.jpg" alt="Item2">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item" data-name="branding">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item3-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item3-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item3-low.jpg">
+                <img src="img/work-item3.jpg" alt="Item3">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item" data-name="illustration">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item4-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item4-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item4-low.jpg">
+                <img src="img/work-item4.jpg" alt="Item4">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item" data-name="branding">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item5-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item5-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item5-low.jpg">
+                <img src="img/work-item5.jpg" alt="Item5">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item" data-name="mobile">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item6-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item6-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item6-low.jpg">
+                <img src="img/work-item6.jpg" alt="Item6">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item work__list-item--additional" data-name="design">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item7-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item7-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item7-low.jpg">
+                <img src="img/work-item7.jpg" alt="Item7">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item work__list-item--additional" data-name="design">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item8-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item8-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item8-low.jpg">
+                <img src="img/work-item8.jpg" alt="Item8">
+              </picture>
+            </a>
+          </li>
+          <li class="work__list-item work__list-item--additional" data-name="branding">
+            <a class="work__list-link" href="#">
+              <picture>
+                <source media="(min-width: 960px) and (max-width: 1199px)" srcset="img/work-item9-low.jpg">
+                <source media="(min-width: 660px) and (max-width: 959px)" srcset="img/work-item9-low.jpg">
+                <source media="(min-width: 320px) and (max-width: 659px)" srcset="img/work-item9-low.jpg">
+                <img src="img/work-item9.jpg" alt="Item9">
+              </picture>
+            </a>
+          </li>
+        </ul>
+        <div class="work__btn-container">
+          <button class="btn btn--work btn--work-open">More</button>
+          <button class="btn btn--work btn--work-close hide">Close</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients">
+      <div class="wrapper">
+        <h2 class="title clients__title" id="clients">Our clients</h2>
+        <ul class="clients__list">
+          <li class="clients__item"><a class="clients__link" href="#">Google<img src="img/clients-item1.png" width="140" height="48" alt="Google"></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">Samsung<img src="img/clients-item2.png" width="136" height="45" alt="Samsung"></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">Flickr<img src="img/clients-item3.png" width="126" height="38" alt="Flickr"></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">Foursquare<img src="img/clients-item4.png" width="175" height="48" alt="Foursquare"></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">Pinterest<img src="img/clients-item5.png" width="182" height="46" alt="Pinterest"></a></li>
+        </ul>
+      </div>
+      <div class="clients__container">
+        <div class="wrapper">
+          <p class="clients__quote">"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."</p>
+          <div class="clients__citing">- John Doe</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="wrapper">
+        <h2 class="title services__title" id="services">Our services</h2>
+        <div class="services__wrapper">
+          <ul class="services__list">
+            <li class="services__item services__item--design">
+              <div class="services__item-title">App Desing</div>
+              <p class="services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ilabore et dolore.</p>
+            </li>
+
+            <li class="services__item services__item--responsive">
+              <div class="services__item-title">Responsive Layout</div>
+              <p class="services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ilabore et dolore.</p>
+            </li>
+
+            <li class="services__item services__item--pixel">
+              <div class="services__item-title">Pixel Perfect Design</div>
+              <p class="services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ilabore et dolore.</p>
+            </li>
+
+            <li class="services__item services__item--design">
+              <div class="services__item-title">App Desing 2</div>
+              <p class="services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ilabore et dolore.</p>
+            </li>
+
+            <li class="services__item services__item--responsive">
+              <div class="services__item-title">Responsive Layout 2</div>
+              <p class="services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ilabore et dolore.</p>
+            </li>
+
+            <li class="services__item services__item--pixel">
+              <div class="services__item-title">Pixel Perfect Design 2</div>
+              <p class="services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ilabore et dolore.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="sliders services__sliders">
+          <button class="sliders__btn sliders__btn-left sliders__btn--active" type="button"></button>
+          <button class="sliders__btn sliders__btn-right" type="button"></button>
+        </div>
+      </div>
+        <div class="services__container">
+          <div class="wrapper">
+            <div class="services__container-item">
+              <div class="services__container-numbers">13</div>
+              <div class="services__container-text">Designers</div>
+            </div>
+
+            <div class="services__container-item">
+              <div class="services__container-numbers">2580</div>
+              <div class="services__container-text">Hours worked</div>
+            </div>
+
+            <div class="services__container-item">
+              <div class="services__container-numbers">485</div>
+              <div class="services__container-text">Projects</div>
+            </div>
+
+            <div class="services__container-item">
+              <div class="services__container-numbers">750</div>
+              <div class="services__container-text">Tweets</div>
+            </div>
+
+            <div class="services__container-item">
+              <div class="services__container-numbers">380</div>
+              <div class="services__container-text">Coffee cups</div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="skills">
+      <div class="wrapper">
+        <h2 class="title skills__title">Our skills</h2>
+        <div class="skills__container">
+          <div class="skills__left">
+            <div class="skills__left-title">Perfect layout & efficient coding</div>
+            <p class="skills__left-description">Hi, my name is Arif Samad, I’m 28 and I’m a UI / UX Engineer and mentor based in Karachi, Pakistan.<br> I started designing long ago with basic knowledge of Adobe Photoshop, Illustrator and Dreamweaver.</p>
+          </div>
+
+          <ul class="skills__right">
+            <li class="skills__item">
+              <div class="skills__item-name">Photoshop</div>
+              <progress class="skills__progress" min="0" max="100" value="95"></progress>
+            </li>
+
+            <li class="skills__item">
+              <div class="skills__item-name">Illustrator</div>
+              <progress class="skills__progress" min="0" max="100" value="97"></progress>
+            </li>
+
+            <li class="skills__item">
+              <div class="skills__item-name">Html 5</div>
+              <progress class="skills__progress" min="0" max="100" value="80"></progress>
+            </li>
+
+            <li class="skills__item">
+              <div class="skills__item-name">Css 3</div>
+              <progress class="skills__progress" min="0" max="100" value="70"></progress>
+            </li>
+
+            <li class="skills__item">
+              <div class="skills__item-name">Javascript</div>
+              <progress class="skills__progress" min="0" max="100" value="59"></progress>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="wrapper">
+        <h2 class="title title--contacts contact__title" id="contacts">Get in Touch</h2>
+        <div class="social contacts__social">
+          <a class="social__item" href="http://twitter.com">Twitter
+            <svg class="icon icon--twitter" width="25" height="20">
+              <use xlink:href="img/sprite.svg#social-twitter"></use>
+            </svg>
+          </a>
+          <a class="social__item" href="http://facebook.com">Facebook
+            <svg class="icon icon--facebook" width="14" height="25">
+              <use xlink:href="img/sprite.svg#social-facebook"></use>
+            </svg>
+          </a>
+          <a class="social__item" href="http://linkedin.com">Linkedin
+            <svg class="icon icon--linkedin" width="24" height="25">
+              <use xlink:href="img/sprite.svg#social-linkedin"></use>
+            </svg>
+          </a>
+          <a class="social__item" href="http://vk.com">Vk
+            <svg class="icon icon--vk" width="25" height="22">
+              <use xlink:href="img/sprite.svg#social-vk"></use>
+            </svg>
+          </a>
+          <a class="social__item" href="http://behance.net">Behance
+            <svg class="icon icon--behance" width="25" height="17">
+              <use xlink:href="img/sprite.svg#social-behance"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="form contacts__form">
+          <input class="form__name" type="text" id="name" placeholder="Name" required>
+          <input class="form__email" type="email" id="email" placeholder="Email" required>
+          <input class="form__message" type="text" id="message" placeholder="Message" required>
+          <div class="form__btn-container">
+            <button class="btn btn--form">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

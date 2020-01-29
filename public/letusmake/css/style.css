@@ -448,6 +448,9 @@ template {
   width: 900px;
   margin: 0 auto; }
 
+html {
+  scroll-behavior: smooth; }
+
 .header .wrapper {
   min-height: 102px;
   display: -webkit-box;
@@ -489,6 +492,8 @@ template {
   color: #a7a7a7;
   text-decoration: none;
   text-transform: uppercase; }
+  .header__menu-link:hover {
+    color: #000000; }
 
 .intro {
   background-image: url("../img/intro-bg.jpg");
@@ -525,6 +530,10 @@ template {
   border-radius: 50%;
   font-size: 0;
   border: 24px solid #e6e9e8; }
+  .intro__btn:hover {
+    -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.45);
+            box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.45);
+    border: 24px solid rgba(0, 0, 0, 0.15); }
   .intro__btn::after {
     display: block;
     position: absolute;
@@ -565,6 +574,23 @@ template {
 
 .work__list-item {
   margin-bottom: 60px; }
+
+.work__list-link {
+  display: block;
+  width: 260px;
+  height: 170px;
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s; }
+  .work__list-link:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px #000000;
+    -webkit-transition: 0.9s;
+    -o-transition: 0.9s;
+    transition: 0.9s; }
 
 .title {
   margin: 0;
@@ -616,8 +642,21 @@ template {
   width: 210px;
   background-color: #ffffff;
   text-align: center;
-  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.9s;
+  -o-transition: 0.9s;
+  transition: 0.9s;
+  cursor: pointer; }
+  .team__item:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition: 0.9s;
+    -o-transition: 0.9s;
+    transition: 0.9s; }
 
 .team__pic {
   display: block;
@@ -750,7 +789,10 @@ template {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
   margin-left: 20px;
-  position: relative; }
+  position: relative;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
   .form__button::before {
     display: block;
     position: absolute;
@@ -762,6 +804,10 @@ template {
     height: 14px;
     left: 55px;
     top: 21px; }
+  .form__button:hover {
+    -webkit-box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.45);
+    background-color: #000000; }
 
 .button {
   display: inline-block;

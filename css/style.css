@@ -35,7 +35,7 @@
 
 @keyframes title-move {
   0%   {transform: translateX(-500px);}
-  90%   {transform: translateX(60px);}
+  90%  {transform: translateX(60px);}
   100% {transform: translateX(0);}
 }
 
@@ -80,15 +80,16 @@ body {
   margin-bottom: 20px;
   width: 350px;
   background: #deeaee;
+  transition: 1s;
+}
+
+.layouts__main-item:hover {
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 
 .layouts__main-link {
   display: block;
-  opacity: .7;
-}
-
-.layouts__main-link:hover {
-  opacity: 1;
 }
 
 .layouts__main-item:nth-child(3n) {

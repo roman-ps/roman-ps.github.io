@@ -46,8 +46,10 @@ body {
 }
 
 .wrapper {
-  width: 1080px;
+  width: 1120px;
+  box-sizing: border-box;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header__title {
@@ -72,11 +74,11 @@ body {
 .layouts__main {
   margin-top: 50px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .layouts__main-item {
-  margin-right: 15px;
   margin-bottom: 20px;
   width: 350px;
   background: #deeaee;
@@ -90,6 +92,10 @@ body {
 
 .layouts__main-link {
   display: block;
+}
+
+.layouts__main-img {
+  max-width: 100%;
 }
 
 .layouts__main-item:nth-child(3n) {
@@ -128,4 +134,53 @@ body {
 
 .footer__git:hover {
   opacity: 1;
+}
+
+@media (min-width: 880px) and (max-width: 1119px) {
+
+  body {
+    padding-top: 100px;
+  }
+  .wrapper {
+    width: 880px;
+    padding: 0 30px;
+  }
+  .layouts__main {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 879px) {
+  
+  body {
+    padding-top: 80px;
+  }
+  .wrapper {
+    width: 600px;
+  }
+  .header__title {
+    font-size: 32px;
+  }
+  .layouts__title {
+    font-size: 18px;
+  }
+  .layouts__main {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+
+  body {
+    padding-top: 50px;
+  }
+  .wrapper {
+    width: 320px;
+  }
+  .header__title {
+    font-size: 20px;
+  }
+  .layouts__title {
+    font-size: 14px;
+  }
 }

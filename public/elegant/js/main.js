@@ -1,75 +1,108 @@
 'use strict';
 
-var sliders = document.querySelector(".services__list");
-var btnLeft = document.querySelector(".sliders__btn-left");
-var btnRight = document.querySelector(".sliders__btn-right");
-var btnMore = document.querySelector(".btn--work-open");
-var btnClose = document.querySelector(".btn--work-close");
-var workItemAdd = document.querySelectorAll(".work__list-item--additional");
-var jsClick = document.querySelectorAll(".js-click");
-var workItem = document.querySelectorAll(".work__list-item");
-var menuOpen = document.querySelector(".menu__btn--open");
-var menuClose = document.querySelector(".menu__btn--close");
-var menu = document.querySelector(".header__nav");
-var i;
+const Selector = {
+  SLIDERS: '.services__list',
+  BTN_LEFT: '.sliders__btn-left',
+  BTN_RIGHT: '.sliders__btn-right',
+  BTN_MORE: '.btn--work-open',
+  BTN_CLOSE: '.btn--work-close',
+  MENU_OPEN: '.menu__btn--open',
+  MENU_CLOSE: '.menu__btn--close',
+  MENU: '.header__nav',
+  NAV: '.work__nav',
+};
 
+const Selectors = {
+  ITEM_ADD: '.work__list-item--additional',
+  ITEM: '.work__list-item',
+  JSCLICK: '.js-click',
+};
 
-btnRight.addEventListener("click", function(event) {
-  event.preventDefault();
-  sliders.style.transform = "translateX(-100%)";
-  btnRight.classList.add("sliders__btn--active");
-  btnLeft.classList.remove("sliders__btn--active");
-});
+function toNodes(Selectors, flag){
+  let queryType = flag ? 'querySelectorAll' : 'querySelector';
+  let key = Object.keys(Selectors);
+  let Temp = {};
+  key.forEach(function(elem, index) {
+      Temp[key[index]] = document[queryType](Selectors[key[index]]);
+  })
+  return Temp;
+};
 
-btnLeft.addEventListener("click", function(event) {
-  event.preventDefault();
-  sliders.style.transform = "translateX(0px)";
-  btnRight.classList.remove("sliders__btn--active");
-  btnLeft.classList.add("sliders__btn--active");
-});
+const Node = toNodes(Selector, );
+const Nodes = toNodes(Selectors, true);
 
-btnMore.addEventListener("click", function(event) {
-  event.preventDefault();
-  btnMore.classList.add("hide");
-  for (i=0; i < workItemAdd.length; i++) {
-    workItemAdd[i].classList.add("open");
-  }
-  btnClose.classList.remove("hide");
-});
-
-btnClose.addEventListener("click", function(event) {
-  event.preventDefault();
-  btnClose.classList.add("hide");
-  for (i=0; i < workItemAdd.length; i++) {
-    workItemAdd[i].classList.remove("open");
-  }
-  btnMore.classList.remove("hide");
-});
-
-for (i = 0; i < jsClick.length; i++) {
-jsClick[i].addEventListener("click", function(event) {
-  event.preventDefault();
-  var new1 = jsClick[0].dataset.name;
-  console.log(new1);
-  for (i = 0; i < workItem.length; i++) {
-    if (new1 === workItem[i].getAttribute("data-name")) {
-      workItem[i].style.display = "block";
-    }
-    else workItem[i].style.display = "none";
-  }
-})
+function events() {
+  Node.BTN_LEFT.addEventListener("click", sliderMoveLeft);
+  Node.BTN_RIGHT.addEventListener("click", sliderMoveRight);
+  Node.BTN_MORE.addEventListener("click", openAddItems);
+  Node.BTN_CLOSE.addEventListener("click", closeAddItems);
+  Node.MENU_OPEN.addEventListener("click", openMenu);
+  Node.MENU_CLOSE.addEventListener("click", closeMenu);
+  Node.NAV.addEventListener("click", handlerNavigation);
 }
 
-menuOpen.addEventListener("click", function(event) {
-  event.preventDefault();
-  menuOpen.classList.add("menu__btn-hide");
-  menuClose.classList.add("menu__btn-show");
-  menu.classList.add("open");
-});
+function displayAddItems(action, items) {
+  for (let i = 0; i < items.length; i++) {
+    items[i].style.display = action;
+  }
+}
 
-menuClose.addEventListener("click", function(event) {
-  event.preventDefault();
-  menuClose.classList.remove("menu__btn-show");
-  menuOpen.classList.remove("menu__btn-hide");
-  menu.classList.remove("open");
-});
+function openAddItems(evt) {
+  evt.preventDefault();
+  Node.BTN_MORE.classList.toggle("hide");
+  displayAddItems("block", Nodes.ITEM_ADD);
+  Node.BTN_CLOSE.classList.toggle("hide");
+};
+
+function closeAddItems(evt) {
+  evt.preventDefault();
+  Node.BTN_CLOSE.classList.toggle("hide");
+  displayAddItems("none", Nodes.ITEM_ADD);
+  Node.BTN_MORE.classList.toggle("hide");
+};
+
+function handlerNavigation(evt){
+  evt.preventDefault();
+  let child = evt.target;
+  let parent = evt.currentTarget;
+  let temp = evt.target.dataset.name;
+  if (child != parent && temp != '') {
+    for (let i = 0; i < Nodes.ITEM.length; i++) {
+      Nodes.ITEM[i].style.display = temp === Nodes.ITEM[i].dataset.name ? "block" : "none";
+    }
+  }
+  if (temp == 'all') {
+    displayAddItems("block", Nodes.ITEM);
+    displayAddItems("none", Nodes.ITEM_ADD);
+  }
+};
+
+function sliderMoveRight(evt) {
+  evt.preventDefault();
+  Node.SLIDERS.style.transform = "translateX(-100%)";
+  Node.BTN_RIGHT.classList.add("sliders__btn--active");
+  Node.BTN_LEFT.classList.remove("sliders__btn--active");
+};
+
+function sliderMoveLeft(evt) {
+  evt.preventDefault();
+  Node.SLIDERS.style.transform = "translateX(0px)";
+  Node.BTN_RIGHT.classList.remove("sliders__btn--active");
+  Node.BTN_LEFT.classList.add("sliders__btn--active");
+};
+
+function openMenu(evt) {
+  evt.preventDefault();
+  Node.MENU_OPEN.classList.add("menu__btn-hide");
+  Node.MENU_CLOSE.classList.add("menu__btn-show");
+  Node.MENU.classList.add("open");
+};
+
+function closeMenu(evt) {
+  evt.preventDefault();
+  Node.MENU_CLOSE.classList.remove("menu__btn-show");
+  Node.MENU_OPEN.classList.remove("menu__btn-hide");
+  Node.MENU.classList.remove("open");
+};
+
+events();

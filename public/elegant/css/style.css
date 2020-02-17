@@ -465,7 +465,14 @@ template {
   .btn--form {
     width: 177px;
     border: 3px solid #ffffff;
-    color: #ffffff; }
+    color: #ffffff;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+    .btn--form:hover {
+      border: 3px solid #808080;
+      color: #808080;
+      border-radius: 10px; }
 
 @media (min-width: 320px) and (max-width: 659px) {
   .btn--work {
@@ -664,6 +671,9 @@ template {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.header__logo {
+  cursor: pointer; }
+
 .header__title {
   margin: 240px 0 0;
   font-family: "Raleway", "Arial", sans-serif;
@@ -712,6 +722,8 @@ template {
             transform: translate(-50%, -50%) rotate(45deg);
     border-top: none;
     border-left: none; }
+  .header__btn:hover {
+    border: 3px solid rgba(255, 255, 255, 0.2); }
 
 @media (min-width: 660px) and (max-width: 959px) {
   .header__container {
@@ -876,6 +888,19 @@ template {
   font-weight: 700;
   text-align: right;
   text-transform: uppercase; }
+
+.clients__item {
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+  padding: 5px;
+  border: 1px solid transparent; }
+  .clients__item:hover {
+    border: 1px solid #898989;
+    border-radius: 10px;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
 
 @media (min-width: 660px) and (max-width: 959px) {
   .clients__list {
@@ -1231,9 +1256,6 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
@@ -1241,7 +1263,7 @@ template {
   list-style: none; }
 
 .work__list-item {
-  margin: 0 0 20px; }
+  margin: 0 20px 20px 0; }
 
 .work__list-item--additional {
   display: none; }
@@ -1250,11 +1272,17 @@ template {
   margin: 80px auto 0;
   text-align: center; }
 
+@media (min-width: 960px) and (max-width: 1199px) {
+  .work__list-item {
+    margin: 0 10px 20px 0; } }
+
 @media (min-width: 660px) and (max-width: 959px) {
   .work__nav-item {
     padding: 0 0 0 20px; }
   .work__nav-link {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .work__list-item {
+    margin: 0 5px 20px 0; } }
 
 @media (min-width: 320px) and (max-width: 659px) {
   .work {
@@ -1269,7 +1297,9 @@ template {
   .work__btn-container {
     margin: 30px 0 0; }
   .work__nav-link {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .work__list-item {
+    margin: 0 0 20px; } }
 
 .wrapper {
   width: 1200px;
@@ -1293,3 +1323,6 @@ template {
 
 .open {
   display: block; }
+
+html {
+  scroll-behavior: smooth; }

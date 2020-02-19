@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Todo List</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <div class="wrapper">
+      
+      <h1 class="title">Todos</h1>
+      <div class="main">
+        <div class="tasks">
+          <div class="tasks__all">Задания: <span>0</span></div>
+          <div class="tasks__complete">Выполнено: <span>0</span></div>
+        </div>
+        <div class="put">
+          <input class="add" type="text" placeholder="Что добавить?">
+        </div>
+        <div class="active"></div>
+      </div>
+      
+      <footer class="footer">
+        <div class="footer__text">Double-click to add task</div>
+        <div class="footer__copy">Created by <a class="footer__link" href="https://github.com/roman-ps">roman-ps</a></div>
+      </footer>
+      
+    </div>
+    
+    <template id="tmpl">
+      <div class="task">
+        <div class="task__main"></div>
+          <button class="task__btn"></button>
+        
+      </div>
+    </template>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
